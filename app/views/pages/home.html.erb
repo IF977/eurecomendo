@@ -1,0 +1,39 @@
+<% provide(:title, '') %>
+
+<% provide(:jumbotron, '
+      <div class="media">
+  <div class="media-left media-middle">
+   
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"></h4>
+    
+  </div>
+</div>
+      
+  '.html_safe)%>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div id="somos" class="col-md-4">
+        
+        <h2>Quem Somos</h2>
+        <p>Sabemos que é muito difícil confiar em alguém desconhecido, e é nessas horas que acabamos recorrendo a amigos para que indiquem alguém de confiança.O EuRecomendo é um ambiente dedicado a publicar, através dos contratantes dos serviços, recomendações de serviços que lhe foram prestados.</p>
+        <p><a class="btn btn-default" href="#" role="button">Mais Detalhes &raquo;</a></p>
+      </div>
+      <div id="contato" class="col-md-4">
+        <h2>Contato</h2>
+        <p>O EuRecomendo disponibiliza vários canais de atendimento aos seus clientes. Utilize nossos canais para fazer sugestões, reclamações e tirar dúvidas. O EuRecomendo terá o maior prazer em receber seu contato.</p>
+        <p><a class="btn btn-default" href="#" role="button">Mais Detalhes &raquo;</a></p>
+     </div>
+      <div id="recomendacao" class="col-md-4">
+        <h2>Recomendações</h2>
+        <p>Para realizar uma Recomendação é necessário realizar login no site. É bem simples e Rápido. Para visualizar as recomendações feitas por outros clientes, clique em EXIBIR.</p>
+        <p><%= link_to "Exibir", recomendacaos_path, class: "btn btn-default" %></p>
+       
+      </div>
+      
+      
+      
+    </div>

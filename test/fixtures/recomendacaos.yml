@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  servico: MyString
+  prestador: MyString
+  contato_prestador: MyString
+  satisfacao: MyString
+  user_id: 
+
+two:
+  servico: MyString
+  prestador: MyString
+  contato_prestador: MyString
+  satisfacao: MyString
+  user_id: 

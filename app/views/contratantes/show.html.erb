@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @contratante.nome %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @contratante.endereco %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contratante.email %>
+</p>
+
+<p>
+  <strong>Contato:</strong>
+  <%= @contratante.contato %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @contratante.user.email %>
+</p>
+
+<%= link_to 'Edit', edit_contratante_path(@contratante) %> |
+<%= link_to 'Back', contratantes_path %>

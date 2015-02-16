@@ -1,0 +1,42 @@
+<h1>Listing recomendacaos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Servico</th>
+      <th>Prestador</th>
+      <th>Contato prestador</th>
+      <th>Satisfacao</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recomendacaos.each do |recomendacao| %>
+      <div class="row">
+      <div class="col-md-4">
+        
+        <h2>RECOMENDAÇÃO</h2>
+        <p>Servico: <%= recomendacao.servico %> | Prestador: <%= recomendacao.prestador %> | Contato: <%= recomendacao.contato_prestador %> | Satisfacao: <%= recomendacao.satisfacao %> |  Quem Recomendou: <%= recomendacao.user.email %></p>
+        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      </div>
+      
+      <tr>
+        <td><%= recomendacao.servico %></td>
+        <td><%= recomendacao.prestador %></td>
+        <td><%= recomendacao.contato_prestador %></td>
+        <td><%= recomendacao.satisfacao %></td>
+        <td><%= recomendacao.user %></td>
+        <td><%= link_to 'Show', recomendacao %></td>
+        <td><%= link_to 'Edit', edit_recomendacao_path(recomendacao) %></td>
+        <td><%= link_to 'Destroy', recomendacao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recomendacao', new_recomendacao_path %>

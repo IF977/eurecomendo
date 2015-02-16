@@ -1,0 +1,35 @@
+<center>
+<%= image_tag "eu-recomendo.png",
+            :alt => "Descricao img",
+            :id => "id_img",
+            :width => "139px",
+            :height => "172px" %>
+<h1>Recomendações Publicadas</h1>
+</center>
+
+<table>
+  
+  <tbody>
+    
+      <div class="row">
+        <% @recomendacaos.each do |recomendacao| %>
+      <div class="col-md-4">
+        
+        <h2 class="alert alert-success" >RECOMENDAÇÃO</h2>
+        <p>Servico: <%= recomendacao.servico %> | Prestador: <%= recomendacao.prestador %> | Contato: <%= recomendacao.contato_prestador %> | Satisfacao: <%= recomendacao.satisfacao %> |  Quem Recomendou: <%= recomendacao.user.email %></p>
+        
+       <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width&amp;layout=button&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+      </div>
+      <% end %>
+      </div>
+     
+    
+  </tbody>
+</table>
+
+<br/>
+
+
+
+<%= link_to "Recomendar", new_recomendacao_path, class: "btn btn-success btn-lg btn-block btn-huge",:style=>"font-size: 25px;font-weight: bold;" %>
+<%= link_to 'New Recomendacao', new_recomendacao_path %>

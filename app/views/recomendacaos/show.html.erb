@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Servico:</strong>
+  <%= @recomendacao.servico %>
+</p>
+
+<p>
+  <strong>Prestador:</strong>
+  <%= @recomendacao.prestador %>
+</p>
+
+<p>
+  <strong>Contato prestador:</strong>
+  <%= @recomendacao.contato_prestador %>
+</p>
+
+<p>
+  <strong>Satisfacao:</strong>
+  <%= @recomendacao.satisfacao %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @recomendacao.user.email %>
+</p>
+
+<%= link_to 'Edit', edit_recomendacao_path(@recomendacao) %> |
+<%= link_to 'Back', recomendacaos_path %>
