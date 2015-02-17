@@ -139,6 +139,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spring
   pg
+  procfile
   rails_12factor
   turbolinks
   uglifier (>= 1.3.0)
